@@ -29,6 +29,12 @@ function fetchJSON () {
     // On success, parse the JSON and push each image object into mImages array
     success: function (data) {
       
+      mImages = data.images;
+      
+      document.getElementById('photo').src = mImages[mCurrentIndex].imgPath
+      document.getElementById('country').textContent = `Country: ${mImages[mCurrentIndex].country}`
+      document.getElementById('animal').textContent = `Animal: ${mImages[mCurrentIndex].animal}`
+      document.getElementById('description').textContent = `Description: ${mImages[mCurrentIndex].description}`
     },
     error: function () {
       console.log('Connection error.');
