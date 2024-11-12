@@ -1,7 +1,7 @@
 body {
     overflow-x: hidden;
     font-family: 'Century Gothic', sans-serif;
-    background-image: url('../img/chris.webp');
+    background-image: url('img/trees/chris.png');
     background-size: cover;
     background-attachment: fixed;
 }
