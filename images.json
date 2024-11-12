@@ -3,61 +3,61 @@
         {
             "imgPath": "img/trees/boat.jpg",
             "imgLocation": "Great Lakes",
-            "description": "A Christmas tree on a boat",
+            "description": "A Christmas tree on a boat!",
             "date": "01/01/2016"
         },
         {
             "imgPath": "img/trees/desert.jpg",
             "imgLocation": "Sahara Desert",
-            "description": "A Christmas tree in the desert",
+            "description": "A Christmas tree in the desert!",
             "date": "01/02/2017"
         },
         {
             "imgPath": "img/trees/flowerfield.jpg",
             "imgLocation": "Delaware Lavender Field",
-            "description": "A Christmas tree in a flower field",
+            "description": "A Christmas tree in a flower field!",
             "date": "01/03/2018"
         },
         {
             "imgPath": "img/trees/iceberg.jpg",
             "imgLocation": "Artic",
-            "description":"A Christmas tree on an iceberg",
+            "description":"A Christmas tree on an iceberg!",
             "date": "01/04/2019"
         },
         {
             "imgPath": "img/trees/italy.jpg",
             "imgLocation": "Italy",
-            "description": "A Christmas tree in Italy",
+            "description": "A Christmas tree in Italy!",
             "date": "01/05/2020"
         },
         {
             "imgPath": "img/trees/moon.jpg",
             "imgLocation": "Moon",
-            "description": "A Christmas tree on the moon",
+            "description": "A Christmas tree on the moon!",
             "date": "01/06/2021"
         },
         {
             "imgPath": "img/trees/northern.jpg",
             "imgLocation": "Iceland",
-            "description": "A Christmas tree by the Northern Lights",
+            "description": "A Christmas tree by the Northern Lights!",
             "date": "01/07/2022"
         },
         {
             "imgPath": "img/trees/snow.jpg",
             "imgLocation": "Canada",
-            "description": "A Christmas tree in the snow",
+            "description": "A Christmas tree in the snow!",
             "date": "01/08/2023"
         },
         {
             "imgPath": "img/trees/soccer.jpg",
             "imgLocation": "RedBull Stadium",
-            "description": "A Christmas tree in the middle of a soccer field",
+            "description": "A Christmas tree in the middle of a soccer field!",
             "date": "01/09/2024"
         },
         {
             "imgPath": "img/trees/sunset.jpg",
             "imgLocation": "Jamaica",
-            "description": "A Christmas tree on a beach",
+            "description": "A Christmas tree on a beach!",
             "date": "01/10/2025"
         }
   ]
