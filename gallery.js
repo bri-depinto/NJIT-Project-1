@@ -74,7 +74,7 @@ function showNextPhoto() {
   }
   swapPhoto()
   console.log(mCurrentIndex);
-}
+} 
 
 // Goes to the previous photo, loops to the last photo if mCurrentIndex goes negative
 function showPrevPhoto() {
