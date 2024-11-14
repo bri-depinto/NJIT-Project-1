@@ -7,7 +7,7 @@ $(document).ready(() => {
   $('.details').hide() // Hide details initially 
 
   // Call a function here to start the timer for the slideshow
-
+  startTimer();
   // Select the moreIndicator button and add a click event to:
   $('.moreIndicator').on('click', () => {
     // - toggle the rotation classes (rot90 and rot270)
@@ -29,9 +29,8 @@ $(document).ready(() => {
   fetchJSON()
 })
 
-
 // Function to fetch JSON data and store it in mImages
-function fetchJSON () {
+function fetchJSON() {
   // Use $.ajax here to request the JSON data from mUrl
   $.ajax({
     type: 'GET',
@@ -40,35 +39,40 @@ function fetchJSON () {
     success: function (data) {
 
       mImages = data.images;
-      
-      document.getElementById('photo').src = mImages[mCurrentIndex].imgPath;
-      document.getElementById('location').textContent = `Location: ${mImages[mCurrentIndex].imgLocation}`;
-      document.getElementById('description').textContent = `Description: ${mImages[mCurrentIndex].description}`;
-      document.getElementById('date').textContent = `Date: ${mImages[mCurrentIndex].date}`;
+
+      // After JSON is loaded, call swapPhoto() to display the first image
+
+      swapPhoto();
+
     },
     error: function () {
       console.log('Connection error.');
     }
   });
-  // After JSON is loaded, call swapPhoto() to display the first image
 }
 
 // Function to swap and display the next photo in the slideshow
-function swapPhoto () {
+function swapPhoto() {
   // Access mImages[mCurrentIndex] to update the image source and details
+  let theData = mImages[mCurrentIndex];
   // Update the #photo element's src attribute with the current image's path
+  $('#photo').attr('src', theData.imgPath)
   // Update the .location, .description, and .date elements with the current image's details
+  $('#location').text(`Location: ${theData.imgLocation}`)
+  $('#description').text(`Description: ${theData.description}`)
+  $('#date').text(`Date: ${theData.date}`)
 }
 
 // Advances to the next photo, loops to the first photo if the end of array is reached
 function showNextPhoto() {
   // Increment mCurrentIndex and call swapPhoto()
   mCurrentIndex++
-  swapPhoto()
   // Ensure it loops back to the beginning if mCurrentIndex exceeds array length
   if (mCurrentIndex === 10) {
+    // Update the .location, .description, and .date elements with the current image's details
     mCurrentIndex = 0
   }
+  swapPhoto()
   console.log(mCurrentIndex);
 }
 
@@ -76,17 +80,18 @@ function showNextPhoto() {
 function showPrevPhoto() {
   // Decrement mCurrentIndex and call swapPhoto()
   mCurrentIndex--
-  swapPhoto()
   // Ensure it loops to the end if mCurrentIndex is less than 0
   if (mCurrentIndex === -1) {
     mCurrentIndex = 9
   }
+  swapPhoto()
   console.log(mCurrentIndex);
 }
 
 // Starter code for the timer function
-function startTimer () {
+function startTimer() {
   // Create a timer to automatically call `showNextPhoto()` every mWaitTime milliseconds
+  setInterval(showNextPhoto, mWaitTime)
   // Consider using setInterval to achieve this functionality
   // Hint: Make sure only one timer runs at a time
 }
