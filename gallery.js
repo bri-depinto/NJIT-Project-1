@@ -85,7 +85,7 @@ function showPrevPhoto() {
     mCurrentIndex = 9
   }
   swapPhoto()
-  console.log(mCurrentIndex);
+  console.log(mCurrentIndex); 
 }
 
 let interval;
